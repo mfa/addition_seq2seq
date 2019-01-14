@@ -208,7 +208,7 @@ def train(config):
         return -val_loss
 
     # stop if 10 epochs are worse than before
-    handler = EarlyStopping(patience=10, score_function=score_function, trainer=trainer)
+    handler = EarlyStopping(patience=20, score_function=score_function, trainer=trainer)
     evaluator.add_event_handler(Events.COMPLETED, handler)
 
     # save model if better than last one
