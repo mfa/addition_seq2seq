@@ -1,0 +1,8 @@
+task:
+  train1000:
+    machine: cpu
+    env: pytorch-1.0
+    input:
+      - source: mfandreas/datasets/addition_seq2seq/1
+        destination: data
+    command: python main.py --train-data-path=/floyd/input/data/train_100000_1000.csv --val-data-path=/floyd/input/data/val_300.csv --attn_method=dot

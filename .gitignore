@@ -1,0 +1,6 @@
+code/.floydexpt
+data/.floyddata
+data/*.csv
+models/*
+logs/*
+*pyc
